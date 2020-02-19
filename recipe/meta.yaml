@@ -1,5 +1,5 @@
 {% set name = "pyexasol" %}
-{% set version = "0.11.2" %}
+{% set version = "0.11.3" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bf1c120124f1f1f87db55019ca097d51cebb242252faec9b2088bc4fe779db03
+  sha256: 45aaf680d182dfb638d04a33f8e5572d27dcf2f045fff0a03267b0898b7f1f63
 
 build:
   number: 0
