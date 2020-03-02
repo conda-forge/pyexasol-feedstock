@@ -1,18 +1,18 @@
 {% set name = "pyexasol" %}
-{% set version = "0.11.3" %}
+{% set version = "0.12.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 45aaf680d182dfb638d04a33f8e5572d27dcf2f045fff0a03267b0898b7f1f63
+  sha256: e15f4eccf7bdef7a4063a8280e625d8913cb2f6e4971088c67f3a33fadbffdd9
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
