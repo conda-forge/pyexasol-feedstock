@@ -5,11 +5,9 @@ Home: https://github.com/badoo/pyexasol
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyexasol-feedstock/blob/master/LICENSE.txt)
 
 Summary: Exasol python driver with extra features
-
-
 
 Current build status
 ====================
