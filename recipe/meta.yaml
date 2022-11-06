@@ -21,11 +21,12 @@ requirements:
     - setuptools
   run:
     - pandas >=0.22,!=0.23.1
+    - packaging
     - pyopenssl >=17.5.0
     - python >=3.6
     - python-rapidjson
     - rsa
-    - websocket-client >=0.47.0
+    - websocket-client >=1.0.1
 
 test:
   imports:
