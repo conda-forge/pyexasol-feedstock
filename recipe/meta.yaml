@@ -1,5 +1,5 @@
 {% set name = "pyexasol" %}
-{% set version = "0.25.2" %}
+{% set version = "0.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b42cb2c32b7b2ffe7a78c82bf21c3a391043758f2a575c48460252a72386691
+  sha256: d00fd8e05936767c332c50be5f953514579a2c7a80f8a8922cbf7d8a56603fbb
 
 build:
   number: 0
@@ -16,14 +16,15 @@ build:
 
 requirements:
   host:
+    - python >=3.9,<4.0
+    - poetry-core
     - pip
-    - python >=3.6
-    - setuptools
   run:
-    - pandas >=0.22,!=0.23.1
+    - python >=3.9.0,<4.0.0
+    - numpy >1.26.0,<2
+    - pandas >=2.0.0,<3.0.0
     - packaging
-    - pyopenssl >=17.5.0
-    - python >=3.6
+    - pyopenssl
     - python-rapidjson
     - rsa
     - websocket-client >=1.0.1
