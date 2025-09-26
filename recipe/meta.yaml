@@ -21,7 +21,6 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - numpy >1.26.0,<2
     - pandas >=2.0.0,<3.0.0
     - packaging
     - pyopenssl
