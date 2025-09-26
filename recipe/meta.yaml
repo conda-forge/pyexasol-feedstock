@@ -21,9 +21,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0.0
+    - cryptography >=45.0.7
     - pandas >=2.0.0,<3.0.0
     - packaging
-    - pyopenssl
     - python-rapidjson
     - rsa
     - websocket-client >=1.0.1
