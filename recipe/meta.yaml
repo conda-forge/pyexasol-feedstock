@@ -26,7 +26,7 @@ requirements:
     - packaging
     - python-rapidjson
     - rsa
-    - websocket-client >=1.0.1
+    - websocket-client >=1.0.1,<1.9.0
 
 test:
   imports:
