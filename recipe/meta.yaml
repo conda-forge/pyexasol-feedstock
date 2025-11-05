@@ -1,5 +1,5 @@
 {% set name = "pyexasol" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9680a6f4a295d48fe0275ccc260a3615f4ba4af00f03f1c021a1d8eb791cb40
+  sha256: 31b2a950ab5ab90a4670697835c42efdbfe879b0665b91b0fc7fb3e1e7ef076e
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - packaging
     - python-rapidjson
     - rsa
-    - websocket-client >=1.0.1
+    - websocket-client >=1.0.1,<1.9.0
 
 test:
   imports:
