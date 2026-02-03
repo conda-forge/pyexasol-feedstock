@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@dbast](https://github.com/dbast/)
 * [@morazow](https://github.com/morazow/)
+* [@xylar](https://github.com/xylar/)
 
