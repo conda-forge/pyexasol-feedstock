@@ -10,7 +10,7 @@ source:
   sha256: fdb0b98a246dbdc3746b9ad8f5012bd3166daad76c136e9839a841e0abe24bac
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -21,12 +21,13 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - cryptography >=45.0.7
-    - pandas >=2.0.0,<3.0.0
-    - packaging
-    - python-rapidjson
-    - rsa
     - websocket-client >=1.0.1,<1.9.0
+    - packaging >=24.1.0,<26.0.0
+    - cryptography >=45.0.7
+    # pandas extra
+    - pandas >=2.0.0,<3.0.0
+    # rapidjson extra
+    - python-rapidjson >=1.21.0,<2.0.0
 
 test:
   imports:
@@ -49,3 +50,4 @@ extra:
   recipe-maintainers:
     - dbast
     - morazow
+    - xylar
