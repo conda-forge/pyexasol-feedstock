@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  name: pyexasol
+  version: 2.0.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: fdb0b98a246dbdc3746b9ad8f5012bd3166daad76c136e9839a841e0abe24bac
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0.0
+    - websocket-client >=1.0.1,<1.9.0
+    - packaging >=24.1.0,<26.0.0
+    - cryptography >=45.0.7
+    # pandas extra
+    - pandas >=2.0.0,<3.0.0
+    # rapidjson extra
+    - python-rapidjson >=1.21.0,<2.0.0
+
+tests:
+  - python:
+      imports:
+        - pyexasol
+        - pyexasol.db2
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  license: MIT
+  license_file: LICENSE.txt
+  summary: Exasol python driver with extra features
+  homepage: https://github.com/badoo/pyexasol
+
+extra:
+  recipe-maintainers:
+    - dbast
+    - morazow
+    - xylar
