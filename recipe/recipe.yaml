@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyexasol
-  version: 2.0.0
+  version: 2.1.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: fdb0b98a246dbdc3746b9ad8f5012bd3166daad76c136e9839a841e0abe24bac
+  sha256: 0c8b1ddadd7478e1f4ede39c986ae8c0a99277a3befb96de9c21fc43cde7e9fd
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
@@ -27,11 +27,6 @@ requirements:
     - websocket-client >=1.0.1,<1.9.0
     - packaging >=24.1.0,<26.0.0
     - cryptography >=45.0.7
-    # pandas extra
-    - pandas >=2.0.0,<3.0.0
-    # rapidjson extra
-    - python-rapidjson >=1.21.0,<2.0.0
-
 tests:
   - python:
       imports:
