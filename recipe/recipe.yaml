@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyexasol
-  version: 2.1.0
+  version: "2.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 0c8b1ddadd7478e1f4ede39c986ae8c0a99277a3befb96de9c21fc43cde7e9fd
+  sha256: 5c68b376b8c2f1b60384ec408f272d604792129c41538d8e4f7824663a2a42a2
 
 build:
   number: 0
