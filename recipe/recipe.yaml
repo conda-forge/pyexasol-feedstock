@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyexasol
-  version: "2.2.1"
+  version: 2.2.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 90a2ff4d8393a8c6af9d129b4728237c13eff7ca4079b291dc46eba0a509c87d
+  sha256: fb97a1579f4cc159cff04eabdb05fab1a376624abe2a45d339e7e735b7b3d83f
 
 build:
   number: 0
@@ -24,8 +24,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0.0
-    - websocket-client >=1.0.1,<1.9.0
-    - packaging >=24.1.0,<26.0.0
+    - websocket-client >=1.0.1,<2
+    - packaging >=24.1.0
     - cryptography >=45.0.7
 tests:
   - python:
