@@ -33,7 +33,6 @@ tests:
   - python:
       imports:
         - pyexasol
-        - pyexasol.db2
       pip_check: true
       python_version: ${{ python_min }}.*
 
