@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyexasol
-  version: "2.4.1"
+  version: 3.0.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: c0a8799443873f996a8d945dfa129c8d0cc0b9c0b865500b268dff1345218514
+  sha256: 4fedec37b9a05088184f208b842f1d5f3e525a3167b8c38a2f050be228fc15cb
 
 build:
   number: 0
@@ -28,11 +28,11 @@ requirements:
     - packaging >=24.1.0
     - websocket-client >=1.0.1,<=1.9.0
     - pydantic >=2.13.4,<3.0.0
+    - exasol-telemetry-client >=0.2.1,<0.3.0
 tests:
   - python:
       imports:
         - pyexasol
-        - pyexasol.db2
       pip_check: true
       python_version: ${{ python_min }}.*
 
